@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates|Montserrat:400,800');
+
+$colors: (
+    primary: #2f3640,
+    primary-light: rgb(239,238,233),
+    primary-dark: rgb(81,87,103),
+    primary-dark-lighten: rgba(81,87,103,0.5),
+    accent: rgb(224,97,84)
+);
+
+$padding: 15px; 
+$borders: 15px;
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+$desktop: 840px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+body, html {
+    height: 100%;
+    background-color: map-get($map: $colors, $key: primary-light);
+}
+
+h1, h2, h3 {
+    color: map-get($map: $colors, $key: primary-dark);
+    font-family: 'Montserrat', sans-serif;
+}
+
+h4, h5, h6 {
+    color: map-get($map: $colors, $key: primary-dark);
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+p {
+    color: map-get($map: $colors, $key: primary-dark-lighten);
+}
+
+body {
+    font-family: 'Montserrat';
+    margin: 0;
+    
+    // #bg {
+    //     clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
+    //     background-color: color(primary);
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+    //     z-index: -1;
+
+    //     @include desktop {
+    //         clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
+    //     }
+    // }
+
+    #bg-img {
+        /* The image used */
+        background-image: url("https://pickywallpapers.com/img/2018/3/thumb/girl-gym-computer-background-893-912-hd-wallpapers-thumb.jpg");
+        /* Full height */
+        height: 100%; 
+        width: 100%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(2px);
+        clip-path: polygon(100% 0, 100% 86%, 21% 100%, 0 100%, 0 0);
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .bg-overlay {
+        height: 100%; 
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: #000000 0px 2px 6px
+    }
+
+    .jumbotron {
+        position: absolute;
+        margin-top: -600px;
+        left: 0;
+        right: 0;
+        text-align: center;
+
+        h1 {
+            text-align: center;
+            font-size: 7em;
+            color: map-get($map: $colors, $key: primary-light);
+        }
+
+        p {
+            color: map-get($map: $colors, $key: primary-light);
+            margin-top: -100px;
+            font-size: 2em;
+            font-family: cursive;
+        }
+        
+    }
+}
+
+main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    section { 
+        height: 100%; 
+        width: 100%;
+        margin-top: 100px;
+
+        div#primary {
+            color: #fff;
+            padding: $padding;
+            text-align: center;
+    
+            @include desktop {
+                grid-area: primary;
+                text-align: left;
+                margin: 4em 0 0 4em;
+            }
+    
+            h1 {
+                font-size: 3em;
+                margin-top: 10px;
+                text-transform: uppercase;
+
+                @include desktop {
+                    width: 30%;
+                    font-size: 4em;
+                    line-height: .9em;
+                }
+            }
+    
+            p {
+                font-size: 1.4em;
+            }
+    
+            a {
+                color: color(primary-light);
+                border-radius: $borders;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: bold;
+                background-color: color(accent);
+                display: block;
+                text-align: center;
+                margin: 50px auto 0 auto;
+                padding: $padding;
+    
+                @include desktop {
+                    display: inline-block;
+                    padding: $padding $padding * 4;
+                }
+            }
+        }
+
+        div#card {
+            background: #fff;
+            padding: 20px;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin: 1em auto;
+            border-radius: $borders;
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+            width: 80%;
+
+            .header {
+                background-color: color(primary);
+                padding: $padding;
+                box-shadow: 0px 2px 8px rgba($color: #000000, $alpha: 0.3);
+                border-radius: 12px;
+                margin-top: -40px;
+                
+                h3 {
+                    font-size: 3em;
+                    text-align: center;
+                    color: #FFFFFF;
+                }
+            }
+            p {
+                font-size: 1.6em;
+            }
+        }
+    }
+}
+#navbar{
+    position: absolute;
+    top: 0;
+    height:100px;
+    width:100%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: rgba($color: color(primary), $alpha: 0.6);
+    z-index: 100;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        padding: $padding;
+        display: block;
+        text-transform: uppercase;
+    }
+
+    .brand {
+        color:#ecf0f1;
+        font-size:55px;
+        float: left;
+        top: 0;
+        &:hover{
+            color:#ecf0f1;
+            text-shadow:0px 2px 1px #16a085;
+            }
+        svg {
+            height: 70px;
+            position: absolute;
+            float: left;
+            left:0;
+            margin-left: -950px;
+
+            &:hover {
+                filter: drop-shadow(0px 2px 2px color(primary-dark));
+            }
+        }
+    }
+
+    ul{
+        list-style:none;
+    }
+    
+    ul li a{
+        text-decoration:none;
+        float:left;
+        padding:20px 10px;
+        text-align:center;
+        color:#ecf0f1;
+        margin-right:100px;
+        margin-top:15px;
+    }
+
+    ul li a:hover{
+        color:#ecf0f1;
+        text-shadow:0px 2px 1px #16a085;
+    }
+
+    ul li {
+        float:left;
+    }
+
+    ul {
+        float: right;
+    }
+}
+
+.tab {
+    padding-right: 60px;
+}
+
+.card-collection {
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ }
+
+ .card {
+    background: #fff;
+    padding: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin: 1em auto;
+    border-radius: $borders;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    width: 80%;
+    height: 175px;
+    flex: 0 1 24%;
+
+    h3 {
+        vertical-align: middle;
+        font-size: 50px;
+        color: white;
+    }
+ }
+
+ .gastronomy-card {
+     background: #1CB5E0;
+     box-shadow: 0 10px 30px #1CB5E0;
+     align-items: center;
+ }
+
+ .attraction-card {
+    background: #F2994A;
+    box-shadow: 0 10px 30px #F2994A;
+    align-items: center;
+}
+
+.accomodation-card {
+    background: #C33764;
+    box-shadow: 0 10px 30px #C33764;
+    align-items: center;
+}
+
+.card-info {
+    background: #fff;
+    padding: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin: 1em auto;
+    border-radius: $borders;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    width: 80%;
+    height: 175px;
+    flex: 0 1 24%;
+
+
+    h3 {
+        text-align: center;
+    }
+
+    a {
+        float:right;
+        float:left;
+        text-decoration: none;
+        background-color: #d34836;
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+    }
+ }

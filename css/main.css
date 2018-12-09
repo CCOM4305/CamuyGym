@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates|Montserrat:400,800");
+body, html {
+  height: 100%;
+  background-color: #efeee9;
+}
+
+h1, h2, h3 {
+  color: #515767;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h4, h5, h6 {
+  color: #515767;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+p {
+  color: rgba(81, 87, 103, 0.5);
+}
+
+body {
+  font-family: 'Montserrat';
+  margin: 0;
+}
+
+body #bg-img {
+  /* The image used */
+  background-image: url("https://pickywallpapers.com/img/2018/3/thumb/girl-gym-computer-background-893-912-hd-wallpapers-thumb.jpg");
+  /* Full height */
+  height: 100%;
+  width: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  -webkit-clip-path: polygon(100% 0, 100% 86%, 21% 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 86%, 21% 100%, 0 100%, 0 0);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body .bg-overlay {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: #000000 0px 2px 6px;
+          box-shadow: #000000 0px 2px 6px;
+}
+
+body .jumbotron {
+  position: absolute;
+  margin-top: -600px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+body .jumbotron h1 {
+  text-align: center;
+  font-size: 7em;
+  color: #efeee9;
+}
+
+body .jumbotron p {
+  color: #efeee9;
+  margin-top: -100px;
+  font-size: 2em;
+  font-family: cursive;
+}
+
+main {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+main section {
+  height: 100%;
+  width: 100%;
+  margin-top: 100px;
+}
+
+main section div#primary {
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+@media (min-width: 840px) {
+  main section div#primary {
+    grid-area: primary;
+    text-align: left;
+    margin: 4em 0 0 4em;
+  }
+}
+
+main section div#primary h1 {
+  font-size: 3em;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 840px) {
+  main section div#primary h1 {
+    width: 30%;
+    font-size: 4em;
+    line-height: .9em;
+  }
+}
+
+main section div#primary p {
+  font-size: 1.4em;
+}
+
+main section div#primary a {
+  color: #efeee9;
+  border-radius: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #e06154;
+  display: block;
+  text-align: center;
+  margin: 50px auto 0 auto;
+  padding: 15px;
+}
+
+@media (min-width: 840px) {
+  main section div#primary a {
+    display: inline-block;
+    padding: 15px 60px;
+  }
+}
+
+main section div#card {
+  background: #fff;
+  padding: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin: 1em auto;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 80%;
+}
+
+main section div#card .header {
+  background-color: #2f3640;
+  padding: 15px;
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  margin-top: -40px;
+}
+
+main section div#card .header h3 {
+  font-size: 3em;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+main section div#card p {
+  font-size: 1.6em;
+}
+
+#navbar {
+  position: absolute;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: rgba(47, 54, 64, 0.6);
+  z-index: 100;
+}
+
+#navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-transform: uppercase;
+}
+
+#navbar .brand {
+  color: #ecf0f1;
+  font-size: 55px;
+  float: left;
+  top: 0;
+}
+
+#navbar .brand:hover {
+  color: #ecf0f1;
+  text-shadow: 0px 2px 1px #16a085;
+}
+
+#navbar .brand svg {
+  height: 70px;
+  position: absolute;
+  float: left;
+  left: 0;
+  margin-left: -950px;
+}
+
+#navbar .brand svg:hover {
+  -webkit-filter: drop-shadow(0px 2px 2px #515767);
+          filter: drop-shadow(0px 2px 2px #515767);
+}
+
+#navbar ul {
+  list-style: none;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  float: left;
+  padding: 20px 10px;
+  text-align: center;
+  color: #ecf0f1;
+  margin-right: 100px;
+  margin-top: 15px;
+}
+
+#navbar ul li a:hover {
+  color: #ecf0f1;
+  text-shadow: 0px 2px 1px #16a085;
+}
+
+#navbar ul li {
+  float: left;
+}
+
+#navbar ul {
+  float: right;
+}
+
+.tab {
+  padding-right: 60px;
+}
+
+.card-collection {
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin: 1em auto;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  height: 175px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 24%;
+          flex: 0 1 24%;
+}
+
+.card h3 {
+  vertical-align: middle;
+  font-size: 50px;
+  color: white;
+}
+
+.gastronomy-card {
+  background: #1CB5E0;
+  -webkit-box-shadow: 0 10px 30px #1CB5E0;
+          box-shadow: 0 10px 30px #1CB5E0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.attraction-card {
+  background: #F2994A;
+  -webkit-box-shadow: 0 10px 30px #F2994A;
+          box-shadow: 0 10px 30px #F2994A;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.accomodation-card {
+  background: #C33764;
+  -webkit-box-shadow: 0 10px 30px #C33764;
+          box-shadow: 0 10px 30px #C33764;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-info {
+  background: #fff;
+  padding: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin: 1em auto;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  height: 175px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 24%;
+          flex: 0 1 24%;
+}
+
+.card-info h3 {
+  text-align: center;
+}
+
+.card-info a {
+  float: right;
+  float: left;
+  text-decoration: none;
+  background-color: #d34836;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+/*# sourceMappingURL=main.css.map */

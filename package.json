@@ -1,0 +1,24 @@
+{
+  "name": "camuycss",
+  "version": "1.0.0",
+  "description": "Pagina web del pueblo de camuy solo en html5/css",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CCOM4305/CamuyCss.git"
+  },
+  "keywords": [
+    "html5",
+    "css3",
+    "camuy"
+  ],
+  "author": "Jonathan Nieves & Brian Aleman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CCOM4305/CamuyCss/issues"
+  },
+  "homepage": "https://github.com/CCOM4305/CamuyCss#readme"
+}
