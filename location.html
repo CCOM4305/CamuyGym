@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
@@ -28,24 +30,26 @@
 <body style="background-color: #343838">
 
 	<div id="navbar">
-			<a href="" class="brand"><img src="/images/logo.svg" alt="logo" style="margin-top: -50px"><p>CamuyGYM</p></a>
+			<a href="index.html" class="brand"><img src="/images/logo.svg" alt="logo" style="margin-top: -50px"><p>CamuyGYM</p></a>
 				<ul>
 					<li><a href="index.html">home</a></li>
 					<li><a href="contact.html">contáctanos</a></li>
-					<li><a href="location.html">Visítanos</a></li>
+					<li><a class="active" href="#">Visítanos</a></li>
 				</ul>
 			</div>
 		</div>
 	<div class="container-contact100">
 		<div class="wrap-contact100">
-				<span class="contact100-form-title">
+				<h1>Localización del GYM</h1>
+				<!-- <span class="contact100-form-title">
 					Localización del GYM
-				</span>
+				</span> -->
 				<!--The div element for the map -->
 				<div style="text-align: center;" id="map"></div>
 				<script>
 				// Initialize and add the map
 				function initMap() {
+					
 				// The location of Uluru
 				var uluru = {lat: 18.484192, lng: -66.845315};
 				// The map, centered at Uluru
@@ -65,7 +69,59 @@
 					</script>
 		</div>
 	</div>
+	<footer class="footer-distributed">
 
+			<div class="footer-left">
+
+                <img src="/images/logo.svg" style="height: 50px" alt="">
+
+				<p class="footer-links">
+					<a href="#">CCOM4305</a>
+					-
+					<a href="#">MB0</a>
+					·
+					<a href="#">Primer Semestre 2018-2019</a>
+				</p>
+
+				<p class="footer-company-name">CamuyGYM &copy; 2018</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>110 Cll Amador Brall</span>  Camuy, PR 00627</p>
+				</div>
+
+				<div>
+					<i class="fa fa-user"></i>
+					<p><span>Jonathan Nieves</span></p>
+				</div>
+
+				<div>
+					<i class="fa fa-user"></i>
+					<p><span>Brian Aleman</span></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="https://github.com/CCOM4305/CamuyGym"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
 
 
 

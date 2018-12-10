@@ -252,6 +252,10 @@ main {
                     color: color(primary);
                 }
         }
+        .active {
+            background-color: color(accent);
+            color: color(primary);
+        }
     }
 
     }

@@ -227,6 +227,11 @@ main section div#primary a {
   color: #343838;
 }
 
+#navbar ul li .active {
+  background-color: #bef200;
+  color: #343838;
+}
+
 #navbar .brand {
   display: block;
   text-decoration: none;
